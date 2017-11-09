@@ -1,8 +1,8 @@
 // OPCODE REQUIRED :
 // - C_COMPLETE_DAILY_EVENT
 // - C_COMPLETE_EXTRA_EVENT
-// - S_AVAILABLE_EVENT_MATCHING_LIST
 // - S_COMPLETE_EVENT_MATCHING_QUEST
+// - Optional : S_AVAILABLE_EVENT_MATCHING_LIST
 
 module.exports = function AutoVanguard(dispatch) {
 
@@ -17,7 +17,7 @@ module.exports = function AutoVanguard(dispatch) {
 			send(`${enable ? '<font color="#56B4E9">실행</font>' : '<font color="#E69F00">중지</font>'}<font>되었습니다.</font>`)
 		})
 		// NA
-		command.add('vanguard', () => {
+		command.add(['vg', 'vanguard'], () => {
 			enable = !enable
 			send(`${enable ? '<font color="#56B4E9">enabled</font>' : '<font color="#E69F00">disabled</font>'}<font>.</font>`)
 		})
