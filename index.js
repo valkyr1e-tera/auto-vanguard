@@ -4,6 +4,8 @@
 // - S_COMPLETE_EVENT_MATCHING_QUEST
 // - Optional : S_AVAILABLE_EVENT_MATCHING_LIST
 
+// Version 1.2r01
+
 module.exports = function AutoVanguard(dispatch) {
 
 	let enable = true
