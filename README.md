@@ -6,6 +6,7 @@ tera-proxy module to automatically turn in Vanguard Initiative quests upon compl
 
 ## Usage
 ### `vg`
+### `ㅍㅎ`
 ### `vangaurd`
 ### `지령`
 - Toggle on/off
@@ -14,7 +15,9 @@ tera-proxy module to automatically turn in Vanguard Initiative quests upon compl
 ## Info
 - Original author : [baldera-mods](https://github.com/baldera-mods)
 
-## Changelog 
+## Changelog
+### 1.3
+- Update code aesthetics
 ### 1.2
 - Removed protocol version restriction
 ### 1.1
