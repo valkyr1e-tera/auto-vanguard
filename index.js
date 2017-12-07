@@ -4,7 +4,7 @@
 // - S_COMPLETE_EVENT_MATCHING_QUEST
 // - Optional : S_AVAILABLE_EVENT_MATCHING_LIST
 
-// Version 1.3 r:01
+// Version 1.3 r:02
 
 module.exports = function AutoVanguard(d) {
 
@@ -28,7 +28,7 @@ module.exports = function AutoVanguard(d) {
 	})
 
 	// method 2 : use of S_AVAILABLE_EVENT_MATCHING_LIST
-	// requires user to open Vanguard UI will
+	// requires user to open Vanguard UI
 	// will not automatically collect weekly and daily bonuses without doing so
 	/* 
 	d.hook('S_AVAILABLE_EVENT_MATCHING_LIST', (e) => {
