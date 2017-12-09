@@ -16,6 +16,8 @@ tera-proxy module to automatically turn in Vanguard Initiative quests upon compl
 - Original author : [baldera-mods](https://github.com/baldera-mods)
 
 ## Changelog
+### 1.31
+- Update code aesthetics
 ### 1.3
 - Update code aesthetics
 ### 1.2
