@@ -3,7 +3,7 @@
 // - C_COMPLETE_EXTRA_EVENT
 // - S_COMPLETE_EVENT_MATCHING_QUEST
 
-// Version 1.31 r:00
+// Version 1.32 r:00
 
 module.exports = function AutoVanguard(d) {
 
@@ -31,14 +31,17 @@ module.exports = function AutoVanguard(d) {
 		// KR
 		command.add('지령', () => {
 			enable = !enable
-			send(`${enable ? '<font color="#56B4E9">실행</font>' : '<font color="#E69F00">중지</font>'}<font>되었습니다.</font>`)
+			send(`${enable ? '실행되었습니다'.clr('56B4E9') : '중지되었습니다'.clr('E69F00')}` + `.`.clr('FFFFFF'))
 		})
 		// NA
 		command.add(['vg', 'vanguard', 'ㅍㅎ'], () => {
 			enable = !enable
-			send(`${enable ? '<font color="#56B4E9">enabled</font>' : '<font color="#E69F00">disabled</font>'}<font>.</font>`)
+			send(`${enable ? 'enabled'.clr('56B4E9') : 'disabled'.clr('E69F00')}` + `.`.clr('FFFFFF'))
 		})
 		function send(msg) { command.message(`[auto-vanguard] : ` + msg) }
 	} catch (e) { console.log(`[ERROR] -- auto-vanguard module --`) }
 
 }
+
+// credit : https://github.com/Some-AV-Popo
+String.prototype.clr = function (hexColor) { return `<font color="#${hexColor}">${this}</font>` }
