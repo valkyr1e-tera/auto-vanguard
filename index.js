@@ -16,9 +16,9 @@ module.exports = function AutoVanguard(d) {
 		6 = Priest, 7 = Mystic, 8 = Reaper, 9 = Gunner, 10 = Brawler, 11 = Ninja,
 		12 = Valkyrie
 	*/
-	d.hook('S_LOGIN', (e) => {
-		(((e.templateId - 10101) % 100) !== 5) ? enable = true : enable = false
-	})
+	//d.hook('S_LOGIN', (e) => {
+	//	(((e.templateId - 10101) % 100) !== 5) ? enable = true : enable = false
+	//})
 
 	// code
 	d.hook('S_COMPLETE_EVENT_MATCHING_QUEST', (e) => {
