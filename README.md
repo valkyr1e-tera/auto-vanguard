@@ -5,7 +5,7 @@ tera-proxy module to automatically turn in Vanguard Initiative quests upon compl
 - `Command` module
 
 ## Usage
-### `vangaurd` · `vg` · `ㅍㅎ`
+### `vanguard` · `vg` · `ㅍㅎ`
 - Toggle on/off
 - Default is on
 
@@ -15,6 +15,8 @@ tera-proxy module to automatically turn in Vanguard Initiative quests upon compl
 ## Changelog
 <details>
 
+    1.35
+    - Added Battlegrounds support
     1.34
     - Updated font color
     1.33
