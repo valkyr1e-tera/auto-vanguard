@@ -5,7 +5,7 @@
 // - S_LOAD_TOPO
 // - S_LOGIN
 
-// Version 1.35 r:00
+// Version 1.35 r:01
 
 const battleground = [
 	102, // Wintera Snowfield (classic)
