@@ -15,6 +15,8 @@ tera-proxy module to automatically turn in Vanguard Initiative quests upon compl
 ## Changelog
 <details>
 
+    1.36
+    - Added auto-update support
     1.35
     - Added Battlegrounds support
     1.34
