@@ -12,7 +12,6 @@
         "C_COMPLETE_DAILY_EVENT": 1,
         "C_COMPLETE_EXTRA_EVENT": 1,
         "S_COMPLETE_EVENT_MATCHING_QUEST": 1,
-        "S_LOAD_TOPO": 3,
-        "S_LOGIN": 9
+        "S_LOAD_TOPO": 3
     }
 }
