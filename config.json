@@ -1,3 +1,5 @@
 {
-    "enable": true
+    "enable": true,
+    "job": 5,
+    "jobDisable": false
 }

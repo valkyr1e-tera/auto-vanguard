@@ -1,4 +1,7 @@
-// Version 1.36 r:00
+// May : manifest.json, majorPatchVersion update required
+// - S_LOGIN, 10
+
+// Version 1.37 r:00
 
 const Command = require('command')
 const battleground = require('./battleground.js')
@@ -10,20 +13,21 @@ String.prototype.clr = function (hexColor) { return `<font color="#${hexColor}">
 module.exports = function AutoVanguard(d) {
 	const command = Command(d)
 
-	let enable = config.enable
+	let	enable = config.enable,
+		job = config.job,
+		jobDisable = config.jobDisable
 
 	let hold = false,
 		questId = 0
 
-	// for self -- comment out for regular usage
-	// 0 = Warrior, 1 = Lancer, 2 = Slayer, 3 = Berserker, 4 = Sorcerer, 5 = Archer,
-	// 6 = Priest, 7 = Mystic, 8 = Reaper, 9 = Gunner, 10 = Brawler, 11 = Ninja,
-	//12 = Valkyrie
-	/* d.hook('S_LOGIN', (e) => {
-		(((e.templateId - 10101) % 100) !== 5) ? enable = true : enable = false
-	}) */
-
 	// code
+	// disable module for specified job/class
+	// useful for when accumulating item xp on alternative gear
+	// if jobDisable is on, toggle according to configured class
+	d.hook('S_LOGIN', (e) => {
+		(jobDisable && ((e.templateId - 10101) % 100) !== job) ? enable = true : enable = false
+	})
+
 	// if in battleground, hold completion until openworld
 	// else check if there is a quest to complete
 	d.hook('S_LOAD_TOPO', (e) => {
@@ -31,7 +35,7 @@ module.exports = function AutoVanguard(d) {
 		else if (hold && questId !== 0) { completeQuest(); hold = false }
 	})
 
-	// if not in battleground, complete vangaurd quest
+	// if not in battleground, complete vanguard quest
 	// otherwise, hold questId for later completion
 	d.hook('S_COMPLETE_EVENT_MATCHING_QUEST', (e) => {
 		if (!enable) return
@@ -42,6 +46,7 @@ module.exports = function AutoVanguard(d) {
 
 	//helper
 	// rudimentary attempt to complete both extra events
+	// technically, sends unnecessary packets every vanguard completion
 	function completeQuest() {
 		d.toServer('C_COMPLETE_DAILY_EVENT', { id: questId })
 		try {
