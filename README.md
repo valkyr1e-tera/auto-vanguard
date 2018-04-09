@@ -7,7 +7,32 @@ tera-proxy module to automatically turn in Vanguard Initiative quests upon compl
 ## Usage
 ### `vanguard` · `vg` · `ㅍㅎ`
 - Toggle on/off
+
+## Config
+### `enable`
+- Initialize module on/off
 - Default is on
+### `job`
+- Specify class to autuomatically turn module on/off
+- classes are numerically specified by :
+```0 : Warrior
+1 : Lancer
+2 : Slayer
+3 : Berserker
+4 : Sorcerer
+5 : Archer
+6 : Priest
+7 : Mystic
+8 : Reaper
+9 : Gunner
+10 : Brawler
+11 : Ninja
+12 : Valkyrie
+```
+- Default is archer
+### `jobDisable`
+- Automatically turn module on/off for specified class denoted at `job`
+- Default is off
 
 ## Info
 - Original author : [baldera-mods](https://github.com/baldera-mods)
@@ -15,6 +40,9 @@ tera-proxy module to automatically turn in Vanguard Initiative quests upon compl
 ## Changelog
 <details>
 
+    1.37
+    - Added job disable option
+    -- Added options to config.json accordingly
     1.36
     - Added auto-update support
     1.35
