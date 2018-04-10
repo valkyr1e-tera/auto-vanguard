@@ -13,7 +13,7 @@ tera-proxy module to automatically turn in Vanguard Initiative quests upon compl
 - Initialize module on/off
 - Default is on
 ### `job`
-- Specify class to autuomatically turn module off
+- Specify class to automatically turn module off
 - classes are numerically specified by :
 ```0 : Warrior
 1 : Lancer
