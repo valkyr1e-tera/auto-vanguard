@@ -1,7 +1,7 @@
 // May : manifest.json, majorPatchVersion update required
 // - S_LOGIN, 10
 
-// Version 1.37 r:00
+// Version 1.37 r:01
 
 const Command = require('command')
 const battleground = require('./battleground.js')
@@ -25,7 +25,8 @@ module.exports = function AutoVanguard(d) {
 	// useful for when accumulating item xp on alternative gear
 	// if jobDisable is on, toggle according to configured class
 	d.hook('S_LOGIN', (e) => {
-		(jobDisable && ((e.templateId - 10101) % 100) !== job) ? enable = true : enable = false
+		if (!jobDisable) return
+		(((e.templateId - 10101) % 100) !== job) ? enable = true : enable = false
 	})
 
 	// if in battleground, hold completion until openworld
