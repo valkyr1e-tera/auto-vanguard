@@ -5,34 +5,35 @@ tera-proxy module to automatically turn in Vanguard Initiative quests upon compl
 - `Command` module
 
 ## Usage
-### `vanguard` · `vg` · `ㅍㅎ`
-- Toggle on/off
+- __`vanguard` · `vg` · `ㅍㅎ`__
+  - Toggle on/off
 
 ## Config
-### `enable`
-- Initialize module on/off
-- Default is on
-### `job`
-- Specify class to automatically turn module off
-- classes are numerically specified by :
-```0 : Warrior
-1 : Lancer
-2 : Slayer
-3 : Berserker
-4 : Sorcerer
-5 : Archer
-6 : Priest
-7 : Mystic
-8 : Reaper
-9 : Gunner
-10 : Brawler
-11 : Ninja
-12 : Valkyrie
+- __`enable`__
+  - Initialize module on/off
+  - Default is `true`
+- __`job`__
+  - Specify class to automatically turn module off
+  - Default is archer : `5`
+  - Classes are numerically specified by :
 ```
-- Default is archer
-### `jobDisable`
-- Automatically turn module on/off for specified class denoted at `job`
-- Default is off
+        0 : Warrior
+        1 : Lancer
+        2 : Slayer
+        3 : Berserker
+        4 : Sorcerer
+        5 : Archer
+        6 : Priest
+        7 : Mystic
+        8 : Reaper
+        9 : Gunner
+        10 : Brawler
+        11 : Ninja
+        12 : Valkyrie
+```
+- __`jobDisable`__
+  - Automatically turn module on/off for specified class denoted at `job`
+  - Default is `false`
 
 ## Info
 - Original author : [baldera-mods](https://github.com/baldera-mods)
@@ -41,10 +42,11 @@ tera-proxy module to automatically turn in Vanguard Initiative quests upon compl
 <details>
 
     1.37
-    - Added job disable option
-    -- Added options to config.json accordingly
+    - Added job disable options to config file
     1.36
     - Added auto-update support
+    - Refactored config file
+    -- Added `enable`
     1.35
     - Added Battlegrounds support
     1.34
