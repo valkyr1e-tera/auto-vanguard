@@ -1,7 +1,4 @@
-// May : manifest.json, majorPatchVersion update required
-// - S_LOGIN: 10
-
-// Version 1.37 r:02
+// Version 1.37 r:03
 
 const Command = require('command')
 const battleground = require('./battleground.js')

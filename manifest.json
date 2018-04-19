@@ -1,18 +1,18 @@
 {
-  "files": {
-      "battleground.js": "c487e2c524b19a3440b6a1cc7e933369ccc6f8f4e5fad873c1b5434e6fe9ab93",
-      "config.json": {
-          "overwrite": false,
-          "hash": "e884157e68aeb4462218496bc049a649b4d406b67d3a4a8945aab25dc489431f"
-      },
-      "index.js": "639279526a2045c19f15f18c425eee337318f950a1aa876b348215ad4b8abc67",
-      "module.json": "6baff3b1833e9068dd8ab4b7e26fc5a1e8639308ff39afbe22f6df9a44158792"
-  },
-  "defs": {
-      "C_COMPLETE_DAILY_EVENT": 1,
-      "C_COMPLETE_EXTRA_EVENT": 1,
-      "S_COMPLETE_EVENT_MATCHING_QUEST": 1,
-      "S_LOAD_TOPO": 3,
-      "S_LOGIN": 9
-  }
+	"files": {
+		"battleground.js": "c487e2c524b19a3440b6a1cc7e933369ccc6f8f4e5fad873c1b5434e6fe9ab93",
+		"config.json": {
+			"overwrite": false,
+			"hash": "e884157e68aeb4462218496bc049a649b4d406b67d3a4a8945aab25dc489431f"
+		},
+		"index.js": "811403e4c07a89fdcf5195287d3c966ed1829f8830df9b55e29c92070fa3cdc0",
+		"module.json": "6baff3b1833e9068dd8ab4b7e26fc5a1e8639308ff39afbe22f6df9a44158792"
+	},
+	"defs": {
+		"C_COMPLETE_DAILY_EVENT": 1,
+		"C_COMPLETE_EXTRA_EVENT": 1,
+		"S_COMPLETE_EVENT_MATCHING_QUEST": 1,
+		"S_LOAD_TOPO": 3,
+		"S_LOGIN": 10
+	}
 }
