@@ -1,4 +1,4 @@
-// Version 1.37 r:05
+// Version 1.37 r:06
 
 const Command = require('command')
 const battleground = require('./battleground.js')
@@ -46,10 +46,10 @@ module.exports = function AutoVanguard(d) {
 	// rudimentary attempt to complete both extra events
 	// technically, sends unnecessary packets every vanguard completion
 	function completeQuest() {
-		d.toServer('C_COMPLETE_DAILY_EVENT', { id: questId })
+		d.send('C_COMPLETE_DAILY_EVENT', 1, { id: questId })
 		try {
-			setTimeout(() => { d.toServer('C_COMPLETE_EXTRA_EVENT', { type: 0 }) }, 500)
-			setTimeout(() => { d.toServer('C_COMPLETE_EXTRA_EVENT', { type: 1 }) }, 500)
+			setTimeout(() => { d.send('C_COMPLETE_EXTRA_EVENT', 1, { type: 0 }) }, 500)
+			setTimeout(() => { d.send('C_COMPLETE_EXTRA_EVENT', 1, { type: 1 }) }, 500)
 		} catch (e) {
 			// do nothing
 		}
