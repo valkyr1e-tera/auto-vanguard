@@ -1,4 +1,4 @@
-// Version 1.37 r:06
+// Version 1.37 r:07
 
 const Command = require('command')
 const battleground = require('./battleground.js')
@@ -21,21 +21,21 @@ module.exports = function AutoVanguard(d) {
 	// disable module for specified job/class in config
 	// useful for when accumulating item xp on alternative gear
 	// if jobDisable is on, toggle according to configured class
-	d.hook('S_LOGIN', (e) => {
+	d.hook('S_LOGIN', 10, (e) => {
 		if (!jobDisable) return
 		(((e.templateId - 10101) % 100) !== job) ? enable = true : enable = false
 	})
 
 	// if in battleground, hold completion until open world
 	// else check if there is a quest to complete
-	d.hook('S_LOAD_TOPO', (e) => {
+	d.hook('S_LOAD_TOPO', 3, (e) => {
 		if (battleground.includes(e.zone)) { hold = true }
 		else if (hold && questId !== 0) { completeQuest(); hold = false }
 	})
 
 	// if not in battleground, complete vanguard quest
 	// otherwise, hold questId for later completion
-	d.hook('S_COMPLETE_EVENT_MATCHING_QUEST', (e) => {
+	d.hook('S_COMPLETE_EVENT_MATCHING_QUEST', 1, (e) => {
 		if (!enable) return
 		questId = e.id
 		if (!hold) completeQuest()
