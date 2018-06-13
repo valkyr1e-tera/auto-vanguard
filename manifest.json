@@ -2,7 +2,7 @@
 	"files": {
 		"battleground.js": "c487e2c524b19a3440b6a1cc7e933369ccc6f8f4e5fad873c1b5434e6fe9ab93",
 		"config.json": { "overwrite": false, "hash": "e884157e68aeb4462218496bc049a649b4d406b67d3a4a8945aab25dc489431f" },
-		"index.js": "baf2a5029c6d72b82480a8be1107b21e6255fd197a55882b2058e56589c890c3",
+		"index.js": "6b3e445bec4dfdb8d1d78eddbf35894e3711164e3d1100504a85a7514a67d2b9",
 		"module.json": "6baff3b1833e9068dd8ab4b7e26fc5a1e8639308ff39afbe22f6df9a44158792"
 	},
 	"defs": {

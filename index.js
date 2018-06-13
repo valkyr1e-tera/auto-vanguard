@@ -1,4 +1,4 @@
-// Version 1.37 r:07
+// Version 1.38 r:00
 
 const Command = require('command')
 const battleground = require('./battleground.js')
@@ -17,13 +17,21 @@ module.exports = function AutoVanguard(d) {
 	let hold = false,
 		questId = 0
 
+	// command
+	// toggle
+	command.add(['vanguard', 'vg', 'ㅍㅎ'], () => {
+		enable = !enable
+		send(`${enable ? 'Enabled'.clr('56B4E9') : 'Disabled'.clr('E69F00')}`)
+	})
+
 	// code
 	// disable module for specified job/class in config
 	// useful for when accumulating item xp on alternative gear
 	// if jobDisable is on, toggle according to configured class
 	d.hook('S_LOGIN', 10, (e) => {
+		let prevState = enable
 		if (!jobDisable) return
-		(((e.templateId - 10101) % 100) !== job) ? enable = true : enable = false
+		(((e.templateId - 10101) % 100) !== job) ? enable = prevState : enable = false
 	})
 
 	// if in battleground, hold completion until open world
@@ -56,12 +64,6 @@ module.exports = function AutoVanguard(d) {
 		questId = 0
 	}
 
-	// command
-	// toggle
-	command.add(['vanguard', 'vg', 'ㅍㅎ'], () => {
-		enable = !enable
-		send(`${enable ? 'Enabled'.clr('56B4E9') : 'Disabled'.clr('E69F00')}`)
-	})
 	function send(msg) { command.message(`[auto-vanguard] : ` + msg) }
 
 }

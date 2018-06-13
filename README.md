@@ -37,10 +37,13 @@ tera-proxy module to automatically turn in Vanguard Initiative quests upon compl
 
 ## Info
 - Original author : [baldera-mods](https://github.com/baldera-mods)
+- **Support seraph via paypal donations, thanks in advance : [paypal](https://www.paypal.me/seraphinush)**
 
 ## Changelog
 <details>
 
+    1.38
+    - Fixed issue where disabling module by setting `enable = false` would change while `jobDisable = true`
     1.37
     - Added job disable options to config file
     1.36
