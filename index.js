@@ -1,15 +1,15 @@
-// Version 1.38 r:00
+// Version 1.39 r:00
 
 const Command = require('command')
-const battleground = require('./battleground.js')
-const config = require('./config.json')
+const GameState = require('tera-game-state')
 
-// credit : https://github.com/Some-AV-Popo
-String.prototype.clr = function (hexColor) { return `<font color="#${hexColor}">${this}</font>` }
+const config = require('./config.json')
 
 module.exports = function AutoVanguard(d) {
 	const command = Command(d)
+	const game = GameState(d)
 
+	// config
 	let	enable = config.enable,
 		job = config.job,
 		jobDisable = config.jobDisable
@@ -21,23 +21,23 @@ module.exports = function AutoVanguard(d) {
 	// toggle
 	command.add(['vanguard', 'vg', 'ㅍㅎ'], () => {
 		enable = !enable
-		send(`${enable ? 'Enabled'.clr('56B4E9') : 'Disabled'.clr('E69F00')}`)
+		send(`${enable ? 'Enabled' : 'Disabled'}`)
 	})
 
 	// code
 	// disable module for specified job/class in config
 	// useful for when accumulating item xp on alternative gear
 	// if jobDisable is on, toggle according to configured class
-	d.hook('S_LOGIN', 10, (e) => {
+	d.hook('S_LOGIN', 'raw', () => {
 		let prevState = enable
 		if (!jobDisable) return
-		(((e.templateId - 10101) % 100) !== job) ? enable = prevState : enable = false
+		(((game.me.templateId - 10101) % 100) !== job) ? enable = prevState : enable = false
 	})
 
 	// if in battleground, hold completion until open world
 	// else check if there is a quest to complete
-	d.hook('S_LOAD_TOPO', 3, (e) => {
-		if (battleground.includes(e.zone)) { hold = true }
+	d.hook('S_LOAD_TOPO', 'raw', () => {
+		if (game.me.inBattleground) { hold = true }
 		else if (hold && questId !== 0) { completeQuest(); hold = false }
 	})
 

@@ -2,7 +2,8 @@
 tera-proxy module to automatically turn in Vanguard Initiative quests upon completion
 
 ## Dependency
-- `Command` module
+- `command` module
+- `tera-game-state` module
 
 ## Usage
 - __`vanguard` · `vg` · `ㅍㅎ`__
@@ -42,6 +43,9 @@ tera-proxy module to automatically turn in Vanguard Initiative quests upon compl
 ## Changelog
 <details>
 
+    1.39
+    - Removed font color bloat
+    - Added `tera-game-state` dependency
     1.38
     - Fixed issue where disabling module by setting `enable = false` would change while `jobDisable = true`
     1.37

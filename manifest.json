@@ -1,15 +1,12 @@
 {
 	"files": {
-		"battleground.js": "c487e2c524b19a3440b6a1cc7e933369ccc6f8f4e5fad873c1b5434e6fe9ab93",
 		"config.json": { "overwrite": false, "hash": "e884157e68aeb4462218496bc049a649b4d406b67d3a4a8945aab25dc489431f" },
-		"index.js": "6b3e445bec4dfdb8d1d78eddbf35894e3711164e3d1100504a85a7514a67d2b9",
+		"index.js": "cf048751085c3bda317ed6831a2b4399db848389fe32c69860fc5c124a864e7f",
 		"module.json": "6baff3b1833e9068dd8ab4b7e26fc5a1e8639308ff39afbe22f6df9a44158792"
 	},
 	"defs": {
 		"C_COMPLETE_DAILY_EVENT": 1,
 		"C_COMPLETE_EXTRA_EVENT": 1,
-		"S_COMPLETE_EVENT_MATCHING_QUEST": 1,
-		"S_LOAD_TOPO": 3,
-		"S_LOGIN": 10
+		"S_COMPLETE_EVENT_MATCHING_QUEST": 1
 	}
 }
