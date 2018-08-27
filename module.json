@@ -1,4 +1,10 @@
 {
-    "servers": ["https://raw.githubusercontent.com/seraphinush-gaming/auto-vanguard/master/"],
-    "supportUrl": "https://github.com/seraphinush-gaming/auto-vanguard/issues"
+	"disableAutoUpdate": false,
+	"options": {
+		"niceName": "auto-vanguard",
+		"settingsVersion": 1,
+		"settingsFile": "config.json",
+		"settingsMigrator": "settings_migrator.js"
+	},
+	"servers": ["https://raw.githubusercontent.com/valkyr1e-tera/auto-vanguard/master/"]
 }

@@ -1,12 +1,11 @@
 {
 	"files": {
-		"config.json": { "overwrite": false, "hash": "e884157e68aeb4462218496bc049a649b4d406b67d3a4a8945aab25dc489431f" },
-		"index.js": "cf048751085c3bda317ed6831a2b4399db848389fe32c69860fc5c124a864e7f",
-		"module.json": "6baff3b1833e9068dd8ab4b7e26fc5a1e8639308ff39afbe22f6df9a44158792"
+		"index.js": "c9282fbf068b731b327a7eb11c25d0c901bd289a7d7459ccb716a38c0b4b0b54",
+		"module.json": "38fe8dbb6ecf1ade37e7d6ffaf578b4b1ba960af836fead1b795f506b6f179e1",
+		"settings_migrator.js": "a2110c9510e9d37c5803489bbac26096c5fabdaa22c82c20507f6248f37adba2"
 	},
 	"defs": {
 		"C_COMPLETE_DAILY_EVENT": 1,
-		"C_COMPLETE_EXTRA_EVENT": 1,
 		"S_COMPLETE_EVENT_MATCHING_QUEST": 1
 	}
 }
