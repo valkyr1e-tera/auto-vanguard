@@ -2,7 +2,8 @@
 
 const DefaultSettings = {
   "enabled": true,
-  "complete_delay": 0
+  "complete_delay": 0,
+  "players": {}
 }
 
 module.exports = function MigrateSettings(from_ver, to_ver, settings) {
@@ -20,7 +21,11 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings) {
       return MigrateSettings(from_ver + 1, to_ver, settings);
     }
 
-    switch (to_ver) {
+    switch (to_ver)
+    {
+      case 2:
+        settings = Object.assign(settings, DefaultSettings);
+        break;
     }
 
     return settings;
