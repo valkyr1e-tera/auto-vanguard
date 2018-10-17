@@ -11,7 +11,7 @@ module.exports = function AutoVanguard(mod) {
 		},
 		'info': () => {
 			mod.command.message(`global - ${mod.settings.enabled ? 'en' : 'dis'}able`)
-			mod.command.message(`character - ${mod.settings.players[name] ? 'en' : 'dis'}able`)
+			mod.command.message(`character - ${mod.settings.players[mod.game.me.name] ? 'en' : 'dis'}able`)
 			mod.command.message(`complete_delay - ${mod.settings.complete_delay}ms`)
 		}
 	})
