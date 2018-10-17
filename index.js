@@ -8,6 +8,11 @@ module.exports = function AutoVanguard(mod) {
 			const name = mod.game.me.name
 			mod.settings.players[name] = !charConfig(name)
 			mod.command.message((mod.settings.players[name] ? 'en' : 'dis') + 'abled for this character')
+		},
+		'info': () => {
+			mod.command.message(`global - ${mod.settings.enabled ? 'en' : 'dis'}able`)
+			mod.command.message(`character - ${mod.settings.players[name] ? 'en' : 'dis'}able`)
+			mod.command.message(`complete_delay - ${mod.settings.complete_delay}ms`)
 		}
 	})
 

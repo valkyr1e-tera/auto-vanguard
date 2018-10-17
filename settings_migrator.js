@@ -23,7 +23,7 @@ module.exports = function MigrateSettings(from_ver, to_ver, settings) {
 
     switch (to_ver)
     {
-      case 2:
+      default:
         settings = Object.assign(settings, DefaultSettings);
         break;
     }
