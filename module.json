@@ -1,7 +1,10 @@
 {
 	"disableAutoUpdate": false,
+	"name": "auto-vanguard",
+	"author": "valkyr1e",
+	"description": "Complete vanguard quest automatically",
+	"version": "1.0",
 	"options": {
-		"niceName": "auto-vanguard",
 		"settingsVersion": 2,
 		"settingsFile": "config.json",
 		"settingsMigrator": "settings_migrator.js"
